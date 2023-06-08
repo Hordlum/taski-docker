@@ -2,7 +2,6 @@ from http import HTTPStatus
 from django.test import Client, TestCase
 from backend.api import models
 
-
 class TaskiAPITestCase(TestCase):
     def setUp(self):
         self.guest_client = Client()
