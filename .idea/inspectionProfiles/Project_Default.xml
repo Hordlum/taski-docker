@@ -1,0 +1,84 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="field.field.required" />
+            <item index="1" class="java.lang.String" itemvalue="%}" />
+            <item index="2" class="java.lang.String" itemvalue="{%" />
+            <item index="3" class="java.lang.String" itemvalue="if" />
+            <item index="4" class="java.lang.String" itemvalue="action_url" />
+            <item index="5" class="java.lang.String" itemvalue="endif" />
+            <item index="6" class="java.lang.String" itemvalue="else" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="img" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="10">
+            <item index="0" class="java.lang.String" itemvalue="Django" />
+            <item index="1" class="java.lang.String" itemvalue="pytz" />
+            <item index="2" class="java.lang.String" itemvalue="django" />
+            <item index="3" class="java.lang.String" itemvalue="pytest" />
+            <item index="4" class="java.lang.String" itemvalue="pytest-django" />
+            <item index="5" class="java.lang.String" itemvalue="pytest-pythonpath" />
+            <item index="6" class="java.lang.String" itemvalue="sorl-thumbnail" />
+            <item index="7" class="java.lang.String" itemvalue="requests" />
+            <item index="8" class="java.lang.String" itemvalue="djangorestframework" />
+            <item index="9" class="java.lang.String" itemvalue="Pillow" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W292" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N803" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="sait.main.models.product.objects" />
+          <option value="dict.*" />
+          <option value="yatube.posts.models.Post.*" />
+          <option value="yatube.posts.tests.test_models.PostModelTest.user" />
+          <option value="yatube.posts.tests.test_models.PostModelTest.*" />
+          <option value="yatube.posts.models.pub_date" />
+          <option value="yatube.posts.models.Group.objects" />
+          <option value="yatube.posts.models.Follow.objects" />
+          <option value="yatube.posts.models.Comment.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
