@@ -206,6 +206,12 @@ jobs:
           # с которым установлено соединение
           script: |
             cd taski
+            sudo docker system prune -a --force
+            sudo npm cache clean
+            sudo apt-get clean clean
+            sudo journalctl --vacuum-size=100M
+            sudo journalctl --vacuum-time=1d
+            sudo journalctl --vacuum-files=10
             # Выполняет pull образов с Docker Hub
             sudo docker compose -f docker-compose.production.yml pull
             # Перезапускает все контейнеры в Docker Compose
