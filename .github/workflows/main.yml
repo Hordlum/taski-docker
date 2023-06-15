@@ -205,6 +205,20 @@ jobs:
           # которые нужно выполнить на сервере,
           # с которым установлено соединение
           script: |
+            cd taski
+            sudo docker system prune -a --force
+            sudo npm cache clean
+            sudo apt-get clean clean
+            sudo journalctl --vacuum-size=100M
+            sudo journalctl --vacuum-time=1d
+            sudo journalctl --vacuum-files=10
+            sudo docker compose -f docker-compose.production.yml pull
+            sudo docker compose -f docker-compose.production.yml down
+            sudo docker compose -f docker-compose.production.yml up -d
+            sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
+            sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic
+            sudo docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /backend_static/static/
+
 #            cd taski
 #            sudo docker system prune -a --force
 #            sudo npm cache clean
@@ -222,19 +236,7 @@ jobs:
 #            sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic
 #            sudo docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /backend_static/static/
 
-              cd taski
-              sudo docker system prune -a --force
-              sudo npm cache clean
-              sudo apt-get clean clean
-              sudo journalctl --vacuum-size=100M
-              sudo journalctl --vacuum-time=1d
-              sudo journalctl --vacuum-files=10
-              sudo docker compose -f docker-compose.production.yml pull
-              sudo docker compose -f docker-compose.production.yml down
-              sudo docker compose -f docker-compose.production.yml up -d
-              sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
-              sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic
-              sudo docker compose -f docker-compose.production.yml exec backend cp -r /app/collected_static/. /backend_static/static/
+
 #  send_message:
 #    runs-on: ubuntu-latest
 #    needs: deploy
